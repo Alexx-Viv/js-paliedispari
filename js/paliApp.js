@@ -14,10 +14,9 @@ function isPalindrom(word) {
     arrayReverse.push(arrayWord[i]);
   }
 
-  for (var i = 0; i < arrayWord.length; i++) {
-    if (arrayWord[i].toLowerCase() !== arrayReverse[i].toLowerCase()) {
-      return false;
-    }
+  if (arrayWord.join().toLowerCase() === arrayReverse.join().toLowerCase()) {
+    return true;
+  } else {
+    return false;
   }
-  return true;
 }
